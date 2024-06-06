@@ -1,0 +1,163 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url(bg-best/bg1.jpeg);
+}
+
+.container {
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+h1 {
+    text-align: center;
+    color: #fff;
+}
+
+.film-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.film-item {
+    flex: 0 0 calc(25% - 20px);
+    margin-right: 20px;
+    margin-bottom: 20px;
+    background-color: rgba(209, 205, 205, 0.856);
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.film-item img {
+    width: 100%;
+    display: block;
+    object-fit: cover;
+}
+
+.film-item h2 {
+    font-size: 1.2em;
+    text-align: center;
+    margin: 10px 0;
+}
+
+@media only screen and (max-width: 600px) {
+    .film-item {
+        flex: 0 0 calc(50% - 20px);
+    }
+}
+
+.nav-container {
+    background-color: rgba(49, 33, 33, 0.6);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+
+.menu {
+    display: flex;
+    list-style-type: none;
+    padding: 0;
+}
+
+.menu li {
+    margin: 0 10px;
+}
+
+.menu a {
+    text-decoration: none;
+    color: #333;
+}
+
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+.sticky+.container {
+    padding-top: 60px;
+}
+
+.menu li a {
+    position: relative;
+    display: inline-block;
+    padding: 10px 20px;
+    color: #333;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    z-index: 1;
+}
+
+.menu li a::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    background-color: rgba(209, 205, 205, 0.5);
+    transition: all 0.3s ease;
+    z-index: -1;
+}
+
+.menu li a:hover::before {
+    width: 100%;
+}
+
+.menu li a:active::before {
+    width: 100%;
+}
+
+.menu li a:active {
+    color: #fff;
+    background-color: #f00;
+}
+
+.h1-text {
+    color: rgba(180, 10, 10, 0.938);
+}
+
+#box-text {
+    text-align: center;
+    font-size: 120%;
+    color: #fff;
+}
+
+#box-text p {
+    color: #fff;
+}
+
+form {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+button {
+    padding: 10px 15px;
+    font-size: 16px;
+    background-color: rgba(72, 90, 114, 0.74);
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: rgba(70, 84, 85, 0.863);
+    transform: scale(10px);
+}
+
+
+input[type="text"] {
+    padding: 10px;
+    font-size: 16px;
+    margin-right: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
